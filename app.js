@@ -12,6 +12,10 @@ const errorMiddelwere = require("./middleweres/error")
 const app = express();
 dotenv.config({path : "./config/config.env"});
 
+app.get("/",(req,res) =>{
+    res.json("Hello")
+})
+
 
 app.use(cors({
     origin:[process.env.FRONTEND_URL],
